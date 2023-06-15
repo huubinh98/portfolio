@@ -122,7 +122,6 @@ $color-text: #cbd5e1;
 
       .skill-img {
         width: 80px;
-        height: 80px;
         object-fit: cover;
       }
 
