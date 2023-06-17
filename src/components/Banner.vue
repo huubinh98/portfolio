@@ -30,7 +30,7 @@ const state = reactive({
 $white-cl: #ffffff;
 $primary-cl: #f891fc;
 .banner {
-  background: url("../assets/images/banner.jpg") center center / cover no-repeat;
+  background: url("/images/banner.jpg") center center / cover no-repeat;
   width: 100%;
   height: 100vh;
 
