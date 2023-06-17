@@ -7,7 +7,7 @@
         <div class="container">
           <div class="about-wrap">
             <div class="image-about">
-              <img src="./assets/images/binh.02.JPG" alt="" />
+              <img src="@/assets/images/avt_kh_nen.png" alt="" />
             </div>
             <div class="flex-1">
               <h2 class="text-title">About Me</h2>
@@ -48,11 +48,7 @@
           <h2 class="text-title">Skills</h2>
           <div class="wrap-skills">
             <div v-for="item in SKILLS" :key="item.title" class="skill-item">
-              <img
-                :src="'src/assets/images/' + item.src"
-                :alt="item.title"
-                class="skill-img"
-              />
+              <img :src="item.src" :alt="item.title" class="skill-img" />
               <p class="text-skills">{{ item.title }}</p>
             </div>
           </div>
@@ -115,7 +111,7 @@ $color-text: #cbd5e1;
   #experience {
     position: relative;
     .bg-exper {
-      background-image: url("src/assets/images/experience-xl.jpg");
+      background-image: url("@/assets/images/experience-xl.jpg");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -128,23 +124,23 @@ $color-text: #cbd5e1;
 
     @media only screen and (max-width: 480px) {
       .bg-exper {
-        background-image: url("./assets/images/experience-xs.jpg");
+        background-image: url("@/assets/images/experience-xs.jpg");
       }
     }
 
     @media only screen and (max-width: 660px) {
       .bg-exper {
-        background-image: url("./assets/images/experience-sm.jpg");
+        background-image: url("@/assets/images/experience-sm.jpg");
       }
     }
     @media only screen and (max-width: 900px) {
       .bg-exper {
-        background-image: url("./assets/images/experience-md.jpg");
+        background-image: url("@/assets/images/experience-md.jpg");
       }
     }
     @media only screen and (max-width: 1170px) {
       .bg-exper {
-        background-image: url("./assets/images/experience-lg.jpg");
+        background-image: url("@/assets/images/experience-lg.jpg");
       }
     }
   }
