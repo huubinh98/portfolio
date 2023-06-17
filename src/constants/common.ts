@@ -5,7 +5,7 @@ import type {
   skillsObject,
 } from "@/models";
 
-const urlImage = "/src/assets/images";
+const urlImage = "./assets/images";
 
 export const UrlGithub = "https://github.com/huubinh98";
 
@@ -35,55 +35,55 @@ export const MENU = [
 export const SKILLS = [
   {
     title: "HTML",
-    src: `${urlImage}/icon-html.svg`,
+    src: `icon-html.svg`,
   },
   {
     title: "CSS",
-    src: `${urlImage}/icons-css.svg`,
+    src: `icons-css.svg`,
   },
   {
     title: "SASS",
-    src: `${urlImage}/logo-sass.svg`,
+    src: `logo-sass.svg`,
   },
   {
     title: "JAVASCRIPT",
-    src: `${urlImage}/icons-js.svg`,
+    src: `icons-js.svg`,
   },
   {
     title: "TYPESCRIPT",
-    src: `${urlImage}/typescript-icon.svg`,
+    src: `typescript-icon.svg`,
   },
   {
     title: "TAILWIND",
-    src: `${urlImage}/icons-tailwind.svg`,
+    src: `icons-tailwind.svg`,
   },
   {
     title: "BOOTSTRAP",
-    src: `${urlImage}/logo-bootstrap.svg`,
+    src: `logo-bootstrap.svg`,
   },
   {
     title: "REACT",
-    src: `${urlImage}/logo-react.svg`,
+    src: `logo-react.svg`,
   },
   {
     title: "VUE",
-    src: `${urlImage}/vuejs-icon.svg`,
+    src: `vuejs-icon.svg`,
   },
   {
     title: "GITLAB",
-    src: `${urlImage}/icon-git.svg`,
+    src: `icon-git.svg`,
   },
   {
     title: "GITHUB",
-    src: `${urlImage}/icons-github.svg`,
+    src: `icons-github.svg`,
   },
   {
     title: "FIGMA",
-    src: `${urlImage}/figma-icon.svg`,
+    src: `figma-icon.svg`,
   },
   {
     title: "PHOTOSHOP",
-    src: `${urlImage}/photoshop-logo.svg`,
+    src: `photoshop-logo.svg`,
   },
 ] as skillsObject[];
 

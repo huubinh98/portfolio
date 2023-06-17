@@ -48,7 +48,11 @@
           <h2 class="text-title">Skills</h2>
           <div class="wrap-skills">
             <div v-for="item in SKILLS" :key="item.title" class="skill-item">
-              <img :src="item.src" :alt="item.title" class="skill-img" />
+              <img
+                :src="'src/assets/images/' + item.src"
+                :alt="item.title"
+                class="skill-img"
+              />
               <p class="text-skills">{{ item.title }}</p>
             </div>
           </div>
@@ -111,7 +115,7 @@ $color-text: #cbd5e1;
   #experience {
     position: relative;
     .bg-exper {
-      background-image: url("./assets/images/experience-xl.jpg");
+      background-image: url("src/assets/images/experience-xl.jpg");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
