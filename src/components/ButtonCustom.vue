@@ -1,78 +1,86 @@
 <template>
-  <div class="my-button" @mousemove="changeX">
-    <i
-      :style="{
-        background: `linear-gradient(${x}deg, #00ccff, #0e1538, #0e1538, #d400d4)`,
-      }"
-    ></i>
-    <i
-      :style="{
-        background: `linear-gradient(${x}deg, #00ccff, #0e1538, #0e1538, #d400d4)`,
-      }"
-    ></i>
-    <span>{{ buttonText }}</span>
+  <div class="text-box">
+    <p class="btn btn-white btn- animate">{{ buttonText }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-const props = defineProps({
+defineProps({
   buttonText: {
     type: String,
     default: "",
   },
 });
-
-const x = ref(45);
-
-function changeX(e: any) {
-  const rect = e.target.getBoundingClientRect();
-  const xVal = e.clientX - rect.left;
-  x.value = xVal;
-}
 </script>
 
 <style scoped lang="scss">
 $primary-cl: #f891fc;
-.my-button {
-  width: 140px;
-  height: 40px;
-  display: inline-block;
-  border-radius: 8px;
-  position: relative;
+
+.text-box {
   cursor: pointer;
-  transform: scale3d(0);
 }
 
-.my-button:active {
-  transform: scale3d(2);
-}
-
-.my-button i {
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
   position: absolute;
-  inset: -2px;
-  display: block;
-  border-radius: 8px;
 }
 
-.my-button i:nth-child(2) {
-  filter: blur(10px);
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.my-button span {
-  box-sizing: border-box;
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: $primary-cl;
+  color: #ffffff;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  letter-spacing: 2px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  background: rgba(14, 21, 56, 0.65);
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: $primary-cl;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 </style>
