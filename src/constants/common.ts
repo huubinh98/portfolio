@@ -5,7 +5,7 @@ import type {
   skillsObject,
 } from "@/models";
 
-const urlImage = "@/assets/images";
+const urlImage = "@/images";
 
 export const UrlGithub = "https://github.com/huubinh98";
 
